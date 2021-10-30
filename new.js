@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
-import { StyleSheet, Text, View,TextInput,Button} from 'react-native';
+import {View,Text,SafeAreaView,StyleSheet,TextInput,Icon} from 'react-native';
 
 export default function App() {
 // 
@@ -10,53 +10,28 @@ export default function App() {
       setText("Kwadwo")
   }
   return (
-    <View style={styles.container}>
-      
-    
-           <View >
-           <Text style={styles.input} >HELLO GUYS</Text> 
-              <View style={styles.output}>
-           
-              <TextInput 
-        style={{height: 40,alignContent:'center'}}
-        placeholder="STUDENTS NAME"
-      />
-       <TextInput
-        style={{height: 40,alignContent:'center'}}
-        placeholder="INDEX NUMBER"
-      />
-       <TextInput
-        style={{height: 40,alignContent:'center'}}
-        placeholder="STUDENT AGE"
-      />
-      <TextInput
-        style={{height: 40,alignContent:'center'}}
-        placeholder="STUDENT HEIGHT"
-      />
-      <TextInput
-        style={{height: 40,alignContent:'center'}}
-        placeholder="STUDENT WEIGHT"
-      />
-      <View><Button title="Submit">
-        
-        </Button></View>
+    < SafeAreaView   style={{
+      flex:1,
+      paddingHorizontal:20,
+      backgroundColor:'white',
+      }}>
+
+<View style={styles.header}>
+<View>
+<Text style={{fontsize:25}}>Welcome to</Text>
+<Text style={{fontSize:38,color:'green'}}>Plant Shop</Text>
 
 
+</View>
+<Icon name="shopping cart"/>
+</View>
+<View style={{marginTop:30,flexDirection:'row'}} ></View>
+<View style={styles.searchContaimer}>
+    <Icon name="search" size={25}  style={{marginTop:10}}/>
+    <TextInput placeholder="search"/>
+</View>
+  </SafeAreaView> 
 
-
-
-              </View>
-
-             </View>
-
-
-
-
-
-
-
-      </View>
-      
   );
 }
 
@@ -67,14 +42,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
- input:{
-   fontSize:30,
-   marginBottom:70,
-   
-
-
- },
- output:{
-paddingTop:40,
- },
+  input:{
+    fontSize:30,
+    marginBottom:70,
+    },
+  output:{
+ paddingTop:40,
+  },
+ 
 });
