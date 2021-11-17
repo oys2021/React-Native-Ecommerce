@@ -51,7 +51,7 @@ export default function Home(params) {
             <Button
             type="clear"
             title='Buy now'
-            onPress={() => this.props.navigation.navigate('Details')}/>
+            onPress={() => this.props.navigation.navigate('Detail')}/>
         </Card>
         <Card
            >
