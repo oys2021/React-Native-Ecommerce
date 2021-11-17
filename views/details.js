@@ -23,9 +23,7 @@ export default function Login(params) {
           width: 300,
           height: 300,
         }}
-        source={
-          require ("C:\\Users\\USER\\Desktop\\lasr rn\\mreactnative\\assets\\food.jpg")
-        }
+        source={require("../assets/food.jpg")}
       />
       <Text style={{ fontSize: 30, color: "green",alignContent:"center" }}>Welcome to</Text>
       <Text style={{ fontSize: 40, fontWeight: "bold" }}>ORGANI SPECIAL</Text>
@@ -73,6 +71,23 @@ export default function Login(params) {
       >
        
         <Text style={{ paddingLeft: 10, color: "white" ,fontSize:30}}>Get Started</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("Signup");
+        }}
+        style={{
+          padding: 15,
+          paddingHorizontal: 80,
+          marginTop: 10,
+          alignItems: "center",
+          borderRadius: 10,
+          flexDirection: "row",
+          backgroundColor: "green",
+        }}
+      >
+       
+        <Text style={{ paddingLeft: 10, color: "white" ,fontSize:30}}>SignUp</Text>
       </TouchableOpacity>
     </View>
   );
